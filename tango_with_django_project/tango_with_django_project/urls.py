@@ -25,5 +25,4 @@ urlpatterns = [
     path('rango/', include('rango.urls')),
     path('about/', views.about, name='about'),
     path('admin/', admin.site.urls),
-    static(settings.MEDIA_URL, document_root_settings.MEDIA_ROOT)
-]
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
